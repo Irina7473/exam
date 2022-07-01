@@ -44,6 +44,8 @@ class SoundController extends Controller
             'content' => $request->input('content'),
         ]);
 
+        $sound->uploadFile ($request->file('file_path'));
+
         return redirect()->route('sounds.index');
     }
 
@@ -68,7 +70,8 @@ class SoundController extends Controller
         ]);
         $sound = Sound::find($id);
         $sound->update($request->all());
-        return back();
+        $sound->uploadFile ($request->file('file_path'));
+        return redirect()->route('sounds.index');
     }
 
     public function destroy($id)

@@ -27,8 +27,10 @@
                         <td>{{$sound->id}}</td>
                         <td>{{$sound->topic->name}}</td>
                         <td>{{$sound->title}}</td>
-                        <td>###</td>
+                        <td>{{$sound->file_path}}</td>
+
                         <td>
+                            <div><audio id="audio_load" src="/{{$sound->file_path}}" controls></audio></div>
                             <a href="{{route('sounds.edit', $sound->id)}}" class="text-info">Редактировать</a>
                             <form action="{{route('sounds.destroy', $sound->id)}}" method="POST">
                                 @csrf @method('DELETE')
