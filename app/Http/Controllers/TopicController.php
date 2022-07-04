@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Sound;
 use App\Models\Topic;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,7 @@ class TopicController extends Controller
 {
     public function siteindex()
     {
-        return view('site.index', [
+        return view('layouts.index', [
             'topics' => Topic::all(),
         ]);
     }
@@ -36,6 +37,11 @@ class TopicController extends Controller
         Topic::create($request->all());
 
         return redirect('/');
+    }
+
+    public function show($id)
+    {
+       //
     }
 
     public function edit($id)

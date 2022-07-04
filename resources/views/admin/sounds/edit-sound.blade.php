@@ -40,7 +40,7 @@
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Загружен звук: {{$sounds->file_path}}</label>
+                <label class="form-label">Загружен звук: {{$sounds->getFile()}}</label>
                 <audio id="audio_load" src="/{{$sounds->file_path}}" controls></audio>
                 <pre id="display_samples"></pre>
                 <input type="file" name="file_path" class="form-control">

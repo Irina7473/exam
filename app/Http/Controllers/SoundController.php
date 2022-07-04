@@ -49,9 +49,13 @@ class SoundController extends Controller
         return redirect()->route('sounds.index');
     }
 
-    public function show($id)
+    public function show($topic_id)
     {
-        //
+        $topic = Topic::find($topic_id);
+        return view('layouts.show-sound', [
+            'topics' => Topic::all(),
+            'sounds' => $topic->sounds,
+        ]);
     }
 
     public function edit($id)

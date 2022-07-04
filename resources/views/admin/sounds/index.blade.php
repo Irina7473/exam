@@ -27,7 +27,7 @@
                         <td>{{$sound->id}}</td>
                         <td>{{$sound->topic->name}}</td>
                         <td>{{$sound->title}}</td>
-                        <td>{{$sound->file_path}}</td>
+                        <td>{{$sound->getFile()}}</td>
 
                         <td>
                             <div><audio id="audio_load" src="/{{$sound->file_path}}" controls></audio></div>
