@@ -55,6 +55,7 @@ class SoundController extends Controller
         return view('layouts.show-sound', [
             'topics' => Topic::all(),
             'sounds' => $topic->sounds,
+            'selected' => $topic,
         ]);
     }
 

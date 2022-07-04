@@ -1,11 +1,11 @@
 @extends('layouts.index')
 
-{{--@section('subtitle', $sounds->topicTitle($topic->id)->name)--}}
+@section('subtitle', $selected->name . ': слушать звуки и скачать онлайн')
 
 @section('listSounds')
 @parent
 <div>
-    <div class="container mt-5">
+    <div class="container mt-3">
         @if($sounds->count() > 0)
 
 

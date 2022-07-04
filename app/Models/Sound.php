@@ -18,11 +18,6 @@ class Sound extends Model
         return $this->belongsTo(Topic::class, 'topic_id', 'id');
     }
 
-    public function topicTitle($id)
-    {
-        return $this->belongsTo(Topic::class, 'topic_id', 'id');
-    }
-
     public  function uploadFile ($file)
     {
         if ($file == null) return;

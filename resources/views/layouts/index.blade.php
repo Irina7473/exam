@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', ' - Главная')
+{{--@section('title', ' - Главная')--}}
 
 @section('content')
     <div class="container">
@@ -24,9 +24,9 @@
             {{-- Content --}}
             <div class="col-9">
                 <div class="body-content">
-                    <h3 class="text-primary bg-light">Сборник звуков @yield('subtitle') слушать и скачать онлайн</h3>
-                    <div >
-                        @yield('listSounds', 'Не выбрана категория')
+                    <h3 class="text-primary bg-light">@yield('subtitle', '')</h3>
+                    <div class="container mt-5 text-danger">
+                        @yield('listSounds', 'Сборник звуков и аудио эффектов скачать бесплатно. Выберите категорию')
                     </div>
                 </div>
             </div>
